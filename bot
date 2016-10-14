@@ -98,8 +98,6 @@ function tell(user,str)
   chatbox.tell(user, format(str), format(cfg.name), format(cfg.prefix))
 end
 local function log(str,level)
-  f = fs.open(cfg.logFile,"r")
-  lineData = true
   local logTable = {}
   for line in io.lines(cfg.logFile) do
     table.insert(logTable, line)
